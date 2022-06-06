@@ -31,8 +31,7 @@ body {
   line-height: 1.6;
   font-weight: 300;
   font-family: 'Lato', sans-serif;
-  color: #777;
-  padding: 3rem;
+  color: #7777;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +43,11 @@ body {
 }
 
 .main {
-  background-color: #f7f7f7;
+  background-image: linear-gradient(
+    to right,
+    rgba(253, 253, 253, 0.8),
+    rgba(46, 255, 157, 0.8)
+  );
   padding: 8rem 6rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -69,6 +72,10 @@ body {
 
 .ma-bt-md {
   margin-bottom: 3rem !important;
+}
+
+.ma-lt-md {
+  margin-left: 20rem !important;
 }
 
 .ma-bt-lg {
@@ -1246,6 +1253,16 @@ body {
 }
 
 .login-form {
+  margin: 0 auto;
+  max-width: 55rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
+  padding: 5rem 7rem;
+  border-radius: 5px;
+}
+
+.forgot-pwd {
   margin: 0 auto;
   max-width: 55rem;
   background-color: #fff;

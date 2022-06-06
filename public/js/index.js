@@ -1,6 +1,7 @@
 /* eslint-disable */
 import '@babel/polyfill';
 import { login } from './login';
+import { forgotpwd } from './forgotPassword';
 import { logout } from './login';
 import { signup } from './signup';
 import { updateSettings } from './updateSettings';
@@ -8,6 +9,7 @@ import { updateSettings } from './updateSettings';
 const loginForm = document.querySelector('.form');
 const reviewForm = document.querySelector('.form--review');
 const signupForm = document.querySelector('.form--signup');
+const forgotForm = document.querySelector('.form--forgotpwd');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const updateForm = document.querySelector('.form-user-data');
 const updatePassword = document.querySelector('.form-user-password');
@@ -19,6 +21,16 @@ if (loginForm) {
     const password = document.getElementById('password').value;
     console.log(email, password);
     login(email, password);
+  });
+}
+
+if (forgotForm) {
+  forgotForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    // const password = document.getElementById('password').value;
+    console.log(email);
+    forgotpwd(email);
   });
 }
 

@@ -9,6 +9,7 @@ router.get('/', viewsController.getFrontPage);
 router.get('/discover', viewsController.getOverview);
 router.get('/tour/:slug', viewsController.getTour);
 router.get('/login', viewsController.getloginForm);
+router.get('/forgotPassword', viewsController.getForgotPasswordForm);
 router.get('/signup', viewsController.getsignupForm);
 router.get('/create-review', viewsController.getreviewForm);
 router.get('/me', authController.protect, viewsController.myaccount);
