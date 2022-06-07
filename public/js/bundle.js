@@ -8681,47 +8681,48 @@ function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(email, password) {
-    var res;
+    var URL, res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            _context.next = 3;
+            URL = window.location;
+            _context.prev = 1;
+            _context.next = 4;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://127.0.0.1:3000/api/v1/users/login',
+              url: "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/login"),
               data: {
                 email: email,
                 password: password
               }
             });
 
-          case 3:
+          case 4:
             res = _context.sent;
 
             // console.log(res);
             if (res.data.status === 'success') {
               (0, _alerts.showAlert)('success', 'Logged in successfully!');
               window.setTimeout(function () {
-                location.assign('/');
+                location.assign('/discover');
               }, 1500);
             }
 
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
-            _context.t0 = _context["catch"](0);
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[1, 8]]);
   }));
 
   return function login(_x, _x2) {
@@ -8737,36 +8738,37 @@ function () {
   var _ref2 = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee2() {
-    var res;
+    var URL, res;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            _context2.prev = 0;
-            _context2.next = 3;
+            URL = window.location;
+            _context2.prev = 1;
+            _context2.next = 4;
             return (0, _axios.default)({
               method: 'GET',
-              url: 'http://127.0.0.1:3000/api/v1/users/logout'
+              url: "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/logout")
             });
 
-          case 3:
+          case 4:
             res = _context2.sent;
             if (res.data.status = 'success') location.reload(true);
-            _context2.next = 11;
+            _context2.next = 12;
             break;
 
-          case 7:
-            _context2.prev = 7;
-            _context2.t0 = _context2["catch"](0);
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
             console.log(_context2.t0.response);
             (0, _alerts.showAlert)('error', 'Error logging out! Try again.');
 
-          case 11:
+          case 12:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[0, 7]]);
+    }, _callee2, null, [[1, 8]]);
   }));
 
   return function logout() {
@@ -8799,22 +8801,23 @@ function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(email) {
-    var res;
+    var URL, res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            _context.next = 3;
+            URL = window.location;
+            _context.prev = 1;
+            _context.next = 4;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://127.0.0.1:3000/api/v1/users/forgotPassword',
+              url: "".concat(URL.protocol, "://").concat(URL.host, "/api/v1/users/forgotPassword"),
               data: {
                 email: email
               }
             });
 
-          case 3:
+          case 4:
             res = _context.sent;
 
             // console.log(res);
@@ -8825,20 +8828,20 @@ function () {
               }, 1500);
             }
 
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
-            _context.t0 = _context["catch"](0);
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[1, 8]]);
   }));
 
   return function forgotpwd(_x) {
@@ -8871,16 +8874,17 @@ function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(name, email, password, passwordConfirm) {
-    var res;
+    var URL, res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            _context.next = 3;
+            URL = window.location;
+            _context.prev = 1;
+            _context.next = 4;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://127.0.0.1:3000/api/v1/users/signup',
+              url: "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/signup"),
               data: {
                 name: name,
                 email: email,
@@ -8889,7 +8893,7 @@ function () {
               }
             });
 
-          case 3:
+          case 4:
             res = _context.sent;
 
             // console.log(res);
@@ -8900,20 +8904,20 @@ function () {
               }, 1500);
             }
 
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
-            _context.t0 = _context["catch"](0);
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
             (0, _alerts.showAlert)('error', _context.t0.response.data.message);
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[1, 8]]);
   }));
 
   return function signup(_x, _x2, _x3, _x4) {
@@ -8946,44 +8950,45 @@ function () {
   var _ref = _asyncToGenerator(
   /*#__PURE__*/
   regeneratorRuntime.mark(function _callee(data, type) {
-    var url, res;
+    var URL, url, res;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            url = type === 'password' ? 'http://127.0.0.1:3000/api/v1/users/updatePassword' : 'http://127.0.0.1:3000/api/v1/users/updateMe';
-            _context.next = 4;
+            URL = window.location;
+            _context.prev = 1;
+            url = type === 'password' ? "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/updatePassword") : "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/updateMe");
+            _context.next = 5;
             return (0, _axios.default)({
               method: 'PATCH',
               url: url,
               data: data
             });
 
-          case 4:
+          case 5:
             res = _context.sent;
 
             if (res.data.status === 'success') {
               (0, _alerts.showAlert)('success', "".concat(type.toUpperCase(), " Updated!!"));
               window.setTimeout(function () {
-                location.assign('/');
+                location.assign('/discover');
               }, 1500);
             }
 
-            _context.next = 11;
+            _context.next = 12;
             break;
 
-          case 8:
-            _context.prev = 8;
-            _context.t0 = _context["catch"](0);
+          case 9:
+            _context.prev = 9;
+            _context.t0 = _context["catch"](1);
             console.log(_context.t0.response.data);
 
-          case 11:
+          case 12:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 8]]);
+    }, _callee, null, [[1, 9]]);
   }));
 
   return function updateSettings(_x, _x2) {
@@ -9255,7 +9260,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var loginForm = document.querySelector('.form');
+var loginForm = document.querySelector('.form--login');
 var reviewForm = document.querySelector('.form--review');
 var signupForm = document.querySelector('.form--signup');
 var forgotForm = document.querySelector('.form--forgotpwd');
@@ -9388,7 +9393,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62903" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51520" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

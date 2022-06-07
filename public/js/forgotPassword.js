@@ -2,10 +2,11 @@ import axios from 'axios';
 import { showAlert } from './alerts';
 
 export const forgotpwd = async (email) => {
+  const URL = window.location;
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:3000/api/v1/users/forgotPassword',
+      url: `${URL.protocol}://${URL.host}/api/v1/users/forgotPassword`,
       data: {
         email,
       },
