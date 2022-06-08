@@ -6,7 +6,7 @@ export const forgotpwd = async (email) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: `${URL.protocol}://${URL.host}/api/v1/users/forgotPassword`,
+      url: `${URL.protocol}//${URL.host}/api/v1/users/forgotPassword`,
       data: {
         email,
       },

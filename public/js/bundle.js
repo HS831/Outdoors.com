@@ -8811,7 +8811,7 @@ function () {
             _context.next = 4;
             return (0, _axios.default)({
               method: 'POST',
-              url: "".concat(URL.protocol, "://").concat(URL.host, "/api/v1/users/forgotPassword"),
+              url: "".concat(URL.protocol, "//").concat(URL.host, "/api/v1/users/forgotPassword"),
               data: {
                 email: email
               }
@@ -9393,7 +9393,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51520" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54794" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
